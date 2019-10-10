@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>untitled</title>
+    <script src="https://open.95516.com/s/open/js/upsdk.js"></script>
   </head>
   <body>
     <noscript>
@@ -14,4 +15,13 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+<script>
+    upsdk.config({
+        appId:' ',   //必填，接入方的唯一标识，由云闪付分配
+        timestamp:' ' ,   //必填，生成签名的时间戳，从1970年1月1日00:00:00至今的秒数，取东八区的北京时间，例1556096162
+        nonceStr: ' ',    //必填，生成签名的随机串，参见附录三生成签名随机字符串
+        signature: ' ',   //必填，生成签名的摘要，参见附录一、附录二
+        debug: true   //开发阶段可打开此标记，云闪付APP会将调试信息toast出来
+    });
+</script>
 </html>
